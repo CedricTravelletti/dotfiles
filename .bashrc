@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=1000000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -124,3 +124,7 @@ export EDITO=/usr/bin/vim
 
 # Force tmux to run in 256 color mode. This fixes the vim colors inside tmux.
 alias tmux='tmux -2'
+
+alias gpyx='gcc -shared -pthread -fPIC -fwrapv -fno-strict-aliasing -O2 -Wall -I/home/cedric/.local/lib/python3.6/site-packages/numpy/core/include -I/usr/include/python3.6m -lpython3.6m'
+
+export LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
